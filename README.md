@@ -172,14 +172,15 @@ README.md
 ---
 
 # Quick Navigation
+## Quick Navigation
 
-* **Architecture Design** → `01-architecture.md`
-* **Identity Governance Design** → `02-identity-governance-design.md`
-* **MFA Implementation** → `03-mfa-implementation.md`
-* **Conditional Access Policies** → `04-conditional-access-policies.md`
-* **Rollout Plan** → `05-rollout-plan.md`
-* **Challenges & Considerations** → `06-challenges-and-considerations.md`
-* **Lessons Learned** → `07-lessons-learned.md`
+- [Architecture Design](01-architecture.md)
+- [Identity Governance Design](02-identity-governance-design.md)
+- [MFA Implementation](03-mfa-implementation.md)
+- [Conditional Access Policies](04-conditional-access-policies.md)
+- [Rollout Plan](05-rollout-plan.md)
+- [Challenges & Considerations](06-challenges-and-considerations.md)
+- [Lessons Learned](07-lessons-learned.md)
 
 ---
 
