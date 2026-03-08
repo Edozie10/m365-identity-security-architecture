@@ -1,7 +1,3 @@
- Here is a **clean, improved version of your Architecture Design file** written in **proper GitHub Markdown** and **aligned with the content you shared**, while making it look more like **professional architecture documentation**. You can save this as:
-
-`identity-architecture.md`
-
 ---
 
 # Identity Architecture Design
