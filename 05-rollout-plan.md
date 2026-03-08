@@ -1,5 +1,4 @@
-Identity Security Rollout Plan
-
+*Identity Security Rollout Plan*
  Overview
 
 This document describes the phased rollout strategy used to deploy the identity security architecture within the environment. The goal of this rollout is to introduce stronger authentication, device compliance validation, and contextual access controls while maintaining operational stability.
