@@ -171,14 +171,3 @@ This rollout strategy introduces identity security controls in a structured and 
 
 The phased adoption model allows the identity architecture to mature progressively while ensuring that users, administrators, and support teams adapt smoothly to the new security environment.
 
----
-
-✅ This will **look very similar in quality to the repo you studied**, but it is **fully original and tailored to your project**.
-
----
-
-If you want, I can also help you write the **next file in your repo**, which is usually the most important one:
-
-**`identity-architecture.md`**
-
-That file is what **security architects and hiring managers notice first** in IAM projects. 🚀
