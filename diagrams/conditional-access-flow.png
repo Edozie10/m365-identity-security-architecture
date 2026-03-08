@@ -1,1 +1,16 @@
 
+## Identity Architecture Diagram
+
+```mermaid
+flowchart LR
+    User[User Device] --> Login[User Login]
+    Login --> EntraID[Microsoft Entra ID]
+
+    EntraID --> MFA[Multi-Factor Authentication]
+    MFA --> CA[Conditional Access Policies]
+
+    CA --> Exchange[Exchange Online]
+    CA --> Teams[Microsoft Teams]
+    CA --> SharePoint[SharePoint Online]
+    CA --> OneDrive[OneDrive]
+```
