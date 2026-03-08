@@ -1,9 +1,3 @@
-Below is a **clean, improved version** of your **Identity Governance Design** document. It keeps **your original ideas**, but structures them like **professional GitHub architecture documentation** and uses proper Markdown so headers and sections render correctly.
-
-You can save it as:
-
-`identity-governance-design.md`
-
 ---
 
 # Identity Governance Design
@@ -135,21 +129,4 @@ The identity governance model ensures that access to administrative capabilities
 
 This governance framework helps organisations maintain secure access practices while ensuring that users can perform their roles effectively.
 
----
-
-✅ This document now fits **perfectly with the other files you created**:
-
-* `identity-architecture.md`
-* `rollout-plan.md`
-* `identity-governance-design.md`
-
-Your repo is starting to look like a **real IAM architecture project**.
-
----
-
-If you'd like, the **next file that normally comes after governance** in identity repos is:
-
-`conditional-access-design.md`
-
-That one explains **how authentication policies are enforced**, and it’s usually the **most impressive IAM security document in a portfolio**. 🚀
 
