@@ -229,145 +229,226 @@ The purpose of this project is to demonstrate **architecture design, security co
 
 ---
 
+Understood now 👍 — thanks for the full example. That helps a lot.
 
-Microsoft 365 Zero Trust Security Architecture
+You want the documentation to **exactly follow this Markdown structure style**, including:
+
+* `---` separators between sections
+* `#` headings for main sections
+* `###` sub-sections
+* `**bold emphasis**` for key services
+* `* bullet lists`
+* **tables where useful**
+* **clean GitHub-friendly formatting**
+
+This makes the repo look **professional and readable**, which is exactly what recruiters and clients expect.
+
+Below is the **correctly formatted regenerated README.md** based on the **new architecture your manager wants** (Entra ID + Intune + Defender + Purview) while keeping the **same visual structure as your old example**.
+
+---
+
+# Microsoft 365 Zero Trust Security Architecture
 
 Identity-driven security architecture based on an anonymised Microsoft 365 environment. This project documents the design and implementation of identity protection, device security, threat detection, and data protection controls used to secure organisational resources.
 
-The architecture demonstrates how organisations can implement Zero Trust security principles across Microsoft 365 using Microsoft Entra ID, Microsoft Intune, Microsoft Defender, and Microsoft Purview.
+The architecture demonstrates how organisations can implement **Zero Trust security principles** across Microsoft 365 using **Microsoft Entra ID, Microsoft Intune, Microsoft Defender, and Microsoft Purview**.
 
-Index
+---
 
-This repository documents a Microsoft 365 security architecture designed around identity protection, device trust, threat detection, and data protection.
+# Index
 
-The architecture demonstrates how modern cloud environments can secure access to organisational resources using Microsoft security platforms and Zero Trust security principles.
+This repository documents a Microsoft 365 security architecture designed around **Microsoft Entra ID**, **Conditional Access**, **Microsoft Intune**, **Microsoft Defender**, and **Microsoft Purview**.
 
-Architecture Foundation
+The focus is on securing identities, devices, applications, and data across Microsoft 365 services using modern authentication and Zero Trust security principles.
 
-Identity Architecture — High-level design of the identity platform and authentication flow
+---
 
-Identity Governance Design — Role management, administrative privilege governance, and access reviews
+# Architecture Foundation
 
-Authentication and MFA — Multi-Factor Authentication deployment and authentication security controls
+**Identity Architecture** — High-level design of the identity platform and authentication flow
 
-Conditional Access Policies — Identity-driven access control using policy-based enforcement
+**Identity Governance Design** — Role management, administrative controls, and governance strategy
 
-Identity Protection & Privileged Identity Management — Risk-based authentication and privileged access governance
+**Authentication & MFA** — Multi-Factor Authentication deployment and authentication protection model
 
-Security Platform Integration
+**Conditional Access Policies** — Identity-driven access control using policy-based enforcement
 
-Endpoint Management (Microsoft Intune) — Device enrollment, device compliance policies, and endpoint posture validation
+**Identity Protection & PIM** — Risk-based authentication and privileged access governance
 
-Threat Protection (Microsoft Defender) — Identity, endpoint, email, and cloud application threat detection
+---
 
-Data Protection (Microsoft Purview) — Data classification, data loss prevention, and compliance management
+# Security Platform Integration
 
-Deployment & Operations
+**Endpoint Management (Microsoft Intune)** — Device enrollment, compliance policies, and endpoint posture validation
 
-Rollout and Deployment Plan — Phased implementation strategy for identity security controls
+**Threat Protection (Microsoft Defender)** — Identity, endpoint, email, and cloud application threat detection
 
-Operational Challenges — Real-world considerations when deploying authentication and access control systems
+**Data Protection (Microsoft Purview)** — Data classification, data loss prevention, and compliance management
 
-Lessons Learned — Security insights and best practices identified during the implementation process
+---
 
-Overview
+# Deployment & Operations
 
-Modern organisations operate in distributed cloud environments where users access services from multiple devices and locations. Traditional network-based security models are no longer sufficient to protect organisational resources.
+**Rollout Plan** — Phased implementation strategy to introduce identity, device, and threat protection controls safely
 
-This architecture adopts an identity-first security model where authentication, device posture, and contextual risk signals determine whether access is granted to Microsoft 365 services.
+---
 
-All authentication requests are evaluated through Microsoft Entra ID, while additional security services provide layered protection across identities, endpoints, applications, and data.
+# Engineering Perspective
 
-Core Security Platforms
+**Challenges and Considerations** — Operational challenges and architectural trade-offs encountered during deployment
 
-The architecture integrates several Microsoft security services to implement layered protection.
+**Lessons Learned** — Reflections and improvements identified during the project lifecycle
 
-Microsoft Entra ID
+---
 
-Microsoft Entra ID functions as the central identity provider responsible for authentication, authorization, and identity governance.
+# Overview
 
-Key capabilities include:
+This repository documents a **modern Microsoft 365 security architecture** designed to strengthen identity protection, device security, and data governance across an enterprise cloud environment.
 
-User authentication and identity management
-Role-Based Access Control (RBAC)
-Conditional Access policy enforcement
-Identity risk detection
-Token issuance for Microsoft 365 workloads
+The design focuses on protecting organisational resources using:
 
-Microsoft Intune
+* Identity authentication through **Microsoft Entra ID**
+* Device security and compliance validation through **Microsoft Intune**
+* Threat detection using **Microsoft Defender**
+* Data protection using **Microsoft Purview**
 
-Microsoft Intune provides endpoint management and device compliance validation.
+The architecture follows a **Zero Trust security model**, where every authentication attempt is evaluated using identity signals, device posture, and contextual risk indicators before access to resources is granted.
 
-Capabilities include:
+All organisational information has been anonymised. The goal of this project is to demonstrate realistic architecture design, security implementation planning, and operational considerations when deploying Microsoft 365 security controls.
 
-Device enrollment and configuration management
-Compliance policy enforcement
-Mobile device and application management
-Integration with Conditional Access
+---
 
-This ensures that only secure and compliant devices can access organisational resources.
+# Project Summary
 
-Microsoft Defender Security Platform
+| Area                | Details                                                  |
+| ------------------- | -------------------------------------------------------- |
+| Project Type        | Microsoft 365 Security Architecture                      |
+| Platform            | Microsoft Entra ID, Microsoft 365                        |
+| Security Controls   | MFA, Conditional Access, Intune, Defender, Purview       |
+| Scenario            | Anonymised enterprise security architecture              |
+| Focus               | Identity Protection, Endpoint Security, Threat Detection |
+| Security Model      | Zero Trust Architecture                                  |
+| Documentation Style | Architecture design with operational context             |
 
-Microsoft Defender services provide advanced threat detection and response capabilities across the environment.
+---
 
-These services include:
+# Objectives
 
-Microsoft Defender for Office 365
-Microsoft Defender for Endpoint
-Microsoft Defender for Identity
-Microsoft Defender for Cloud Apps
+The project aims to achieve several key security objectives:
 
-Together they provide visibility into identity attacks, endpoint compromise, email threats, and risky cloud application behaviour.
+* Strengthen authentication security using **Multi-Factor Authentication**
+* Implement **Conditional Access policies** to control access to organisational resources
+* Establish governance over identity roles and administrative privileges
+* Ensure only **secure and compliant devices** can access organisational services
+* Detect identity and endpoint threats using Microsoft Defender
+* Protect sensitive organisational data using Microsoft Purview
+* Apply **Zero Trust security principles** across Microsoft 365 services
+* Document architecture decisions and implementation challenges
 
-Microsoft Purview
+---
 
-Microsoft Purview provides data protection and compliance capabilities.
+# Architecture Summary
 
-These include:
+The Microsoft 365 security architecture consists of several integrated components.
 
-Data Loss Prevention (DLP)
-Information Protection and sensitivity labels
-Insider Risk Management
-eDiscovery and compliance investigation
+### Microsoft Entra ID
 
-This ensures sensitive organisational data remains protected across Microsoft 365 workloads.
+* Central identity provider
+* Authentication and authorization platform
+* Token issuance for Microsoft 365 services
+* Identity governance and administrative role management
 
-Microsoft 365 Workloads Protected
+### Multi-Factor Authentication
 
-The architecture secures access to several Microsoft 365 services including:
+* Additional authentication factor beyond passwords
+* Protection against credential compromise
+* Required for privileged and remote access scenarios
 
-Exchange Online
-SharePoint Online
-Microsoft Teams
-OneDrive for Business
+### Conditional Access
 
-Access to these workloads is controlled through identity authentication, device compliance validation, and Conditional Access policies.
+* Policy engine that evaluates authentication signals
+* Enforces MFA requirements and access restrictions
+* Enables adaptive access control based on risk signals
 
-Zero Trust Design Principles
+### Microsoft Intune
 
-This architecture follows Microsoft’s Zero Trust security model.
+* Device enrollment and management platform
+* Device compliance and configuration management
+* Integration with Conditional Access for secure device access
 
-Identity as the Security Boundary
+### Microsoft Defender
 
-Every access request is authenticated and evaluated through Microsoft Entra ID.
+* Threat detection across identities, endpoints, email, and cloud applications
+* Identity attack monitoring
+* Endpoint detection and response
 
-Verify Explicitly
+### Microsoft Purview
 
-Authentication decisions consider multiple signals including identity risk, device compliance, and user context.
+* Data classification and information protection
+* Data Loss Prevention (DLP)
+* Insider Risk Management and compliance tools
 
-Least Privilege Access
+### Microsoft 365 Workloads
 
-Administrative privileges are controlled through RBAC and Privileged Identity Management.
+Access is secured for core services including:
 
-Assume Breach
+* Exchange Online
+* Microsoft Teams
+* SharePoint Online
+* OneDrive for Business
 
-Security monitoring tools continuously monitor the environment for indicators of compromise.
+---
 
-Repository Structure
+# Architecture Diagram
 
-The repository documents both the architecture design and operational deployment considerations.
+The architecture diagram illustrates how identity authentication, device trust, and security policies interact across the Microsoft 365 environment.
 
+Key components represented include:
+
+* User authentication flow
+* Microsoft Entra ID identity provider
+* Multi-Factor Authentication verification
+* Conditional Access policy enforcement
+* Device compliance validation through Microsoft Intune
+* Threat detection using Microsoft Defender
+* Data protection through Microsoft Purview
+* Secure access to Microsoft 365 workloads
+
+The diagram can be found in the **/diagrams** directory.
+
+---
+
+# Design Principles
+
+The architecture follows several core security principles.
+
+**Identity-First Security**
+
+All access decisions originate from Microsoft Entra ID identity verification.
+
+**Zero Trust Model**
+
+Authentication attempts are continuously evaluated before granting access.
+
+**Least Privilege Access**
+
+Administrative roles and privileged access are restricted and governed using RBAC and Privileged Identity Management.
+
+**Layered Security**
+
+Multiple security services such as Intune, Defender, and Purview work together to protect organisational resources.
+
+**Phased Implementation**
+
+Security policies are introduced gradually to avoid operational disruption.
+
+---
+
+# Repository Structure
+
+The documentation reflects the architecture design lifecycle.
+
+```
 diagrams/
 m365-zero-trust-architecture.png
 
@@ -382,36 +463,82 @@ m365-zero-trust-architecture.png
 09-rollout-and-deployment-plan.md
 10-operational-challenges.md
 11-lessons-learned.md
-Intended Audience
+
+README.md
+```
+
+---
+
+# Quick Navigation
+
+* [Identity Architecture](01-identity-architecture.md)
+* [Identity Governance](02-identity-governance.md)
+* [Authentication and MFA](03-authentication-and-mfa.md)
+* [Conditional Access Design](04-conditional-access-design.md)
+* [Identity Protection and PIM](05-identity-protection-and-pim.md)
+* [Endpoint Management (Intune)](06-endpoint-management-intune.md)
+* [Microsoft Defender Security](07-microsoft-defender-security.md)
+* [Data Protection with Purview](08-data-protection-purview.md)
+* [Rollout and Deployment Plan](09-rollout-and-deployment-plan.md)
+* [Operational Challenges](10-operational-challenges.md)
+* [Lessons Learned](11-lessons-learned.md)
+
+---
+
+# Scope
+
+This project focuses on the following areas:
+
+* Identity authentication using **Microsoft Entra ID**
+* Multi-Factor Authentication deployment
+* Conditional Access policy enforcement
+* Endpoint security using **Microsoft Intune**
+* Threat protection using **Microsoft Defender**
+* Data protection using **Microsoft Purview**
+* Secure access to Microsoft 365 workloads
+
+The documentation is intended to demonstrate **security architecture design rather than full production configuration**.
+
+---
+
+# Intended Audience
 
 This project is intended for:
 
-Microsoft 365 Engineers
-Identity and Access Management Engineers
-Cloud Security Engineers
-Security Architects
-Students studying Microsoft cloud security
+* Microsoft 365 Engineers
+* Identity & Access Management Engineers
+* Cloud Security Engineers
+* Security Architects
+* Students studying modern cloud security architecture
 
-Project Objectives
+---
 
-The architecture aims to achieve several security objectives:
+# Design Approach
 
-Strengthen authentication security using modern authentication methods
+The repository emphasises several design goals:
 
-Protect privileged accounts using structured governance and just-in-time access
+* Realistic Microsoft 365 security architecture
+* Clear documentation of identity and device security controls
+* Operational deployment considerations
+* Security-focused design thinking aligned with Zero Trust
 
-Ensure only secure and compliant devices access organisational resources
+---
 
-Detect identity, endpoint, and email-based threats
+# Disclaimer
 
-Protect sensitive organisational data across Microsoft 365 workloads
+This documentation represents a **reconstructed Microsoft 365 security architecture based on an anonymised environment**.
 
-Implement a Zero Trust security model for cloud identity environments
+All tenant-specific information, organisational identifiers, and sensitive configuration details have been removed or altered.
 
-Disclaimer
+The purpose of this project is to demonstrate **architecture design, security concepts, and implementation strategies** without exposing operational infrastructure.
 
-This repository represents a reconstructed architecture based on an anonymised Microsoft 365 environment.
+---
 
-All tenant identifiers, organisational information, and operational configurations have been removed or modified.
+✅ Next, I will generate the next **two files using this exact formatting style**:
 
-The purpose of this project is to demonstrate Microsoft 365 architecture design and security implementation strategies.
+```
+01-identity-architecture.md
+02-identity-governance.md
+```
+
+These will be **much stronger than your originals** and aligned with the **new architecture your manager showed** (Entra ID + Intune + Defender + Purview).
