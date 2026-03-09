@@ -1,21 +1,3 @@
-Understood now 👍 — thanks for the full example. That helps a lot.
-
-You want the documentation to **exactly follow this Markdown structure style**, including:
-
-* `---` separators between sections
-* `#` headings for main sections
-* `###` sub-sections
-* `**bold emphasis**` for key services
-* `* bullet lists`
-* **tables where useful**
-* **clean GitHub-friendly formatting**
-
-This makes the repo look **professional and readable**, which is exactly what recruiters and clients expect.
-
-Below is the **correctly formatted regenerated README.md** based on the **new architecture your manager wants** (Entra ID + Intune + Defender + Purview) while keeping the **same visual structure as your old example**.
-
----
-
 # Microsoft 365 Zero Trust Security Architecture
 
 Identity-driven security architecture based on an anonymised Microsoft 365 environment. This project documents the design and implementation of identity protection, device security, threat detection, and data protection controls used to secure organisational resources.
