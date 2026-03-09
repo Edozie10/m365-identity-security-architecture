@@ -103,20 +103,6 @@ The architecture provides a secure and scalable identity framework for managing 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Identity Architecture Design
 Overview
 
@@ -126,7 +112,7 @@ This architecture establishes Microsoft Entra ID as the central identity provide
 
 All authentication requests pass through the identity platform before access to Microsoft 365 workloads is granted.
 
-The architecture supports a Zero Trust security model, where authentication attempts are continuously evaluated using identity signals, device posture, and contextual risk indicators before access is granted.
+The architecture follows a Zero Trust security model, where authentication attempts are continuously evaluated using identity signals, device posture, and contextual risk indicators.
 
 Identity Platform
 Microsoft Entra ID
@@ -145,17 +131,17 @@ Identity risk detection
 
 Token issuance for Microsoft 365 services
 
-By centralising identity services within Entra ID, organisations maintain a consistent authentication framework across cloud services.
+Centralising identity services within Entra ID ensures that authentication and access policies are applied consistently across the organisation.
 
 Identity Types
 
-The environment supports several identity types that interact with Microsoft 365 resources.
+The environment supports several identity types that interact with Microsoft 365 services.
 
 Administrative Users
 
-Administrative identities manage identity services, security policies, and tenant configuration.
+Administrative identities manage identity services, security configuration, and tenant administration.
 
-Examples of administrative roles include:
+Examples include:
 
 Global Administrator
 
@@ -163,13 +149,19 @@ Security Administrator
 
 User Administrator
 
-Because these accounts have elevated privileges, they require strong authentication protection and privileged access governance.
+Because these accounts have elevated privileges, they require:
+
+Multi-Factor Authentication
+
+Privileged access governance
+
+Continuous monitoring
 
 Standard Employee Identities
 
-Employee identities represent internal users accessing collaboration services and productivity applications.
+Employee identities represent internal users accessing organisational services.
 
-Typical resources accessed include:
+Typical services accessed include:
 
 Exchange Online
 
@@ -185,13 +177,13 @@ Guest Users
 
 Guest identities allow external partners or collaborators to access shared resources within the Microsoft 365 environment.
 
-Guest access is managed using Microsoft Entra B2B collaboration and controlled through Conditional Access policies.
+Guest access is managed using Microsoft Entra B2B collaboration and governed through Conditional Access policies.
 
-This allows organisations to securely collaborate with external users while maintaining control over resource access.
+This enables secure collaboration while maintaining control over organisational data.
 
 Service Accounts
 
-Service identities represent automated services, applications, or scripts that require authentication to interact with organisational resources.
+Service accounts represent automated services or applications that require authentication to interact with Microsoft 365 resources.
 
 Examples include:
 
@@ -205,25 +197,41 @@ These identities are carefully restricted and monitored to reduce the risk of mi
 
 Identity Integration with Security Services
 
-The identity platform integrates with multiple Microsoft security services to strengthen authentication and access decisions.
+The identity platform integrates with several Microsoft security services to strengthen authentication decisions.
 
 Microsoft Intune
 
 Microsoft Intune provides device compliance and endpoint posture signals that are evaluated during Conditional Access authentication decisions.
 
+These signals include:
+
+Device compliance status
+
+Security configuration posture
+
+Operating system health
+
 Microsoft Defender
 
-Microsoft Defender services provide threat intelligence and risk signals related to identity and endpoint activity.
+Microsoft Defender services provide threat intelligence and security signals related to identity and endpoint activity.
 
-These signals can influence authentication decisions when suspicious behaviour is detected.
+Security alerts from Defender may influence authentication decisions when suspicious activity is detected.
 
 Microsoft Purview
 
-Microsoft Purview ensures that sensitive data accessed through authenticated sessions remains protected through classification and policy enforcement.
+Microsoft Purview provides data protection capabilities that ensure sensitive organisational data remains protected during authenticated sessions.
+
+Capabilities include:
+
+Data classification
+
+Sensitivity labels
+
+Data Loss Prevention policies
 
 Authentication Flow
 
-A typical authentication and access flow occurs as follows:
+A typical authentication process occurs as follows:
 
 A user attempts to access a Microsoft 365 service.
 
@@ -231,21 +239,23 @@ The authentication request is redirected to Microsoft Entra ID.
 
 The identity provider verifies the user's credentials.
 
-Conditional Access policies evaluate authentication signals such as:
+Conditional Access policies evaluate contextual signals such as:
+
+User identity
 
 Device compliance
 
-User location
+Network location
 
 Identity risk level
 
 If required, Multi-Factor Authentication is triggered.
 
-If all policy conditions are satisfied, an authentication token is issued.
+If all conditions are satisfied, a secure authentication token is issued.
 
 The user gains access to the requested Microsoft 365 service.
 
-This process ensures that every access request is evaluated before organisational resources are accessed.
+This process ensures that every access request is validated before organisational resources are accessed.
 
 Identity Security Model
 
@@ -257,19 +267,29 @@ Access decisions originate from identity verification rather than network locati
 
 Strong Authentication
 
-Authentication security is strengthened through Multi-Factor Authentication and risk-based authentication.
+Authentication security is strengthened through Multi-Factor Authentication and risk-based authentication policies.
 
 Policy-Based Access Control
 
-Conditional Access policies enforce contextual access decisions based on identity and device signals.
+Conditional Access policies enforce context-aware access decisions.
 
 Continuous Monitoring
 
-Authentication activity and identity behaviour are continuously monitored to detect potential threats.
+Authentication behaviour is continuously monitored to detect suspicious identity activity.
 
 Summary
 
-This identity architecture establishes Microsoft Entra ID as the central authentication and identity governance platform for the organisation.
+This identity architecture establishes Microsoft Entra ID as the central authentication and access control platform for the organisation.
 
-By combining strong authentication, identity governance, device compliance validation, and threat intelligence, the environment creates a secure identity framework that protects access to Microsoft 365 services.
+By combining strong authentication, identity governance, device compliance validation, and threat intelligence, the environment creates a secure foundation for accessing Microsoft 365 services.
+
+
+
+
+
+
+
+
+
+
 
