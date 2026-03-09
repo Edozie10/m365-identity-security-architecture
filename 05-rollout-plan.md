@@ -1,35 +1,55 @@
----
 # Identity Security Rollout Plan
 
-## Overview
+---
 
-This document describes the phased rollout strategy used to deploy the identity security architecture within the environment. The goal of this rollout is to introduce stronger authentication, device compliance validation, and contextual access controls while maintaining operational stability.
+# Overview
 
-Rather than enforcing all security controls simultaneously, the deployment follows a structured adoption model. This allows administrators to observe authentication behaviour, validate policy outcomes, and minimise disruption before stricter enforcement measures are applied.
+This document describes the **phased rollout strategy** used to deploy the identity security architecture within the Microsoft 365 environment.
 
-The rollout aligns with modern identity protection practices and supports a **Zero Trust security approach**, where access decisions are continuously evaluated based on identity, device posture, and risk signals.
+The goal of this rollout is to introduce **strong authentication, device compliance validation, and contextual access controls** while maintaining operational stability.
+
+Rather than enforcing all security controls simultaneously, the deployment follows a **structured adoption model**. This approach allows administrators to observe authentication behaviour, validate policy outcomes, and minimise disruption before stricter enforcement measures are applied.
+
+The rollout aligns with **modern Zero Trust security practices**, where access decisions are continuously evaluated based on identity signals, device posture, and contextual risk indicators.
 
 ---
 
 # Rollout Principles
 
-The deployment approach is guided by several core principles.
+The deployment strategy is guided by several key principles.
+
+---
 
 ### Progressive Policy Enforcement
 
-Security policies are introduced gradually to allow systems and users to adapt before full enforcement occurs.
+Security controls are introduced **gradually** so users and systems can adapt before full enforcement occurs.
+
+---
 
 ### Visibility Before Restriction
 
-Monitoring authentication patterns and device compliance behaviour provides insight into potential operational impacts before policies begin restricting access.
+Authentication behaviour and device compliance signals are monitored before access restrictions are enforced.
+
+This helps administrators identify potential issues before policies impact users.
+
+---
 
 ### User Experience Awareness
 
-Security improvements should protect organisational resources while still supporting normal user productivity.
+Security improvements must protect organisational resources while still supporting **user productivity and operational efficiency**.
+
+---
 
 ### Operational Readiness
 
-Support teams must be prepared to assist users with device enrollment, authentication challenges, and remediation steps before policies are widely enforced.
+IT support teams must be prepared to assist users with:
+
+* Device enrollment
+* MFA registration
+* Authentication challenges
+* Access remediation steps
+
+Proper preparation ensures that support teams can quickly resolve user issues during deployment.
 
 ---
 
@@ -41,66 +61,68 @@ Key configuration tasks include:
 
 * Establishing identity configuration within **Microsoft Entra ID**
 * Creating administrative and user security groups
+* Configuring **Multi-Factor Authentication registration policies**
 * Deploying baseline device management configuration through **Microsoft Intune**
 * Integrating endpoint risk telemetry from **Microsoft Defender for Endpoint**
 * Designing Conditional Access policies in **report-only mode**
 
-At this stage, policies are designed and evaluated but do not yet block user access.
+At this stage, policies are **designed and evaluated but do not yet restrict access**.
 
-The objective is to ensure that all architectural components are operational before introducing user-facing enforcement.
+The objective is to ensure that all architectural components are operational before introducing enforcement.
 
 ---
 
 # Phase 2 — Pilot Deployment
 
-Once the identity architecture is functioning correctly, a controlled pilot group is introduced.
+Once the identity architecture is operational, a **pilot user group** is introduced.
 
-The pilot phase allows administrators to validate how policies behave in real-world scenarios.
+The pilot phase allows administrators to validate how authentication policies behave in real-world scenarios.
 
 Key objectives include:
 
 * Testing device enrollment workflows
-* Evaluating authentication requirements such as multi-factor authentication
-* Verifying device compliance signals
-* Observing Conditional Access decision logic
+* Validating MFA registration and authentication processes
+* Verifying device compliance signals from **Microsoft Intune**
+* Observing Conditional Access policy outcomes
+* Monitoring authentication logs and user behaviour
 
-Pilot users are typically selected from different departments or device types in order to represent a realistic cross-section of the organisation.
+Pilot users are selected from different departments and device types to represent a **realistic cross-section of the organisation**.
 
-Feedback collected during this phase helps refine policies before they affect the wider user population.
+Feedback collected during this phase helps refine policies before wider deployment.
 
 ---
 
 # Phase 3 — Gradual Policy Enforcement
 
-After successful pilot validation, policies are progressively expanded to additional users and workloads.
+After successful pilot testing, policies are progressively expanded to additional users and workloads.
 
-During this stage, Conditional Access policies begin enforcing selected security controls.
+During this phase, Conditional Access policies begin enforcing selected security requirements.
 
 Examples include:
 
-* Requiring multi-factor authentication for privileged accounts
-* Enforcing device compliance checks for access to sensitive services
-* Applying limited-access sessions for unmanaged devices
-* Evaluating risk signals from endpoint security telemetry
+* Requiring **Multi-Factor Authentication** for privileged accounts
+* Enforcing **device compliance checks** for sensitive applications
+* Restricting access from **unmanaged or non-compliant devices**
+* Evaluating **risk signals from Microsoft Defender telemetry**
 
 Authentication logs and policy outcomes are continuously monitored to ensure that legitimate users are not unintentionally blocked.
 
-Adjustments to policy scope or conditions may be required as new usage patterns are identified.
+Adjustments may be required as new usage patterns are identified.
 
 ---
 
 # Phase 4 — Organisation-Wide Enforcement
 
-In the final phase, identity security policies are applied across the organisation.
+In the final phase, identity security policies are applied across the entire organisation.
 
 At this stage:
 
-* Access decisions consistently evaluate identity, device posture, and risk signals
-* Managed devices must meet compliance standards before accessing protected resources
-* Unmanaged device access follows restricted or browser-based session controls
-* Monitoring dashboards provide visibility into authentication behaviour and device health
+* Access decisions consistently evaluate **identity, device posture, and risk signals**
+* Managed devices must meet **Microsoft Intune compliance standards**
+* Unmanaged device access may be restricted to **limited browser sessions**
+* Security monitoring dashboards provide visibility into authentication behaviour
 
-The architecture transitions from rollout into steady operational management.
+The architecture transitions from rollout into **steady operational management**.
 
 ---
 
@@ -112,25 +134,25 @@ Effective communication strategies include:
 
 * Informing users in advance of authentication changes
 * Explaining the purpose of new security requirements
-* Providing documentation for device enrollment and remediation
-* Offering support channels during the early stages of enforcement
+* Providing documentation for device enrollment and MFA setup
+* Offering support channels during early enforcement stages
 
-Clear communication helps reduce confusion and improves user cooperation during security transitions.
+Clear communication reduces confusion and improves user cooperation during security transitions.
 
 ---
 
 # Risk Mitigation Strategy
 
-Several safeguards are incorporated into the rollout process to reduce operational risk.
+Several safeguards are incorporated into the rollout process to minimise operational risk.
 
 These include:
 
-* Deploying Conditional Access policies in report-only mode before enforcement
+* Deploying Conditional Access policies in **report-only mode before enforcement**
 * Introducing policy requirements gradually
 * Monitoring authentication failures and access denials
-* Maintaining emergency access accounts for administrative recovery scenarios
+* Maintaining **emergency access accounts** for administrative recovery
 
-These measures ensure that policy changes can be safely adjusted if unexpected issues occur.
+These safeguards ensure that policy changes can be safely adjusted if unexpected issues occur.
 
 ---
 
@@ -141,33 +163,34 @@ Continuous monitoring is essential throughout the rollout process.
 Security teams track metrics such as:
 
 * Authentication success and failure rates
-* Multi-factor authentication usage
+* Multi-Factor Authentication adoption
 * Device compliance statistics
-* Endpoint risk signals
+* Endpoint risk signals from Microsoft Defender
 * User feedback and support requests
 
-These insights allow administrators to refine security policies based on real operational data.
+These insights allow administrators to refine security policies using **real operational data**.
 
 ---
 
 # Relationship to the Identity Architecture
 
-The rollout plan serves as the operational bridge between architectural design and real-world implementation.
+The rollout plan serves as the **operational bridge between architecture design and real-world implementation**.
 
 The architecture components interact as follows:
 
-* **Identity services** manage authentication and access evaluation.
-* **Device management** provides posture and compliance signals.
-* **Endpoint security telemetry** contributes risk intelligence to access decisions.
-* **Conditional Access policies** enforce security requirements dynamically.
+* **Microsoft Entra ID** manages authentication and identity verification.
+* **Microsoft Intune** provides device compliance signals.
+* **Microsoft Defender** contributes endpoint risk intelligence.
+* **Conditional Access policies** enforce access decisions dynamically.
 
-Together, these components establish a modern identity security framework aligned with **Zero Trust principles**.
+Together, these components create a **modern Zero Trust identity security framework**.
 
 ---
 
 # Summary
 
-This rollout strategy introduces identity security controls in a structured and controlled manner. By prioritising visibility, gradual enforcement, and operational readiness, the deployment minimises disruption while improving the organisation’s security posture.
+This rollout strategy introduces identity security controls in a **structured and controlled manner**.
 
-The phased adoption model allows the identity architecture to mature progressively while ensuring that users, administrators, and support teams adapt smoothly to the new security environment.
+By prioritising visibility, gradual enforcement, and operational readiness, the deployment minimises disruption while improving the organisation’s security posture.
 
+The phased adoption model allows the identity architecture to **mature progressively while ensuring users, administrators, and support teams adapt smoothly to the new security environment**.
