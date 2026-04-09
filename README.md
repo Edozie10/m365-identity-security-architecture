@@ -201,38 +201,33 @@ The documentation reflects the architecture design lifecycle.
 
 ```
 diagrams/
-m365-zero-trust-architecture.png
 
-01-identity-architecture.md
-02-identity-governance.md
-03-authentication-and-mfa.md
-04-conditional-access-design.md
-05-identity-protection-and-pim.md
-06-endpoint-management-intune.md
-07-microsoft-defender-security.md
-08-data-protection-purview.md
-09-rollout-and-deployment-plan.md
-10-operational-challenges.md
-11-lessons-learned.md
+01-architecture.md
+02-identity-governance-design.md
+03-mfa-implementation.md
+04-conditional-access-policies.md
+05-rollout-plan.md
+06-challenges-and-considerations.md
+07-lessons-learned.md
+08-security-architecture-overview.md
+09-monitoring-and-security-operations.md
 
+README.md
 README.md
 ```
 
 ---
-
 # Quick Navigation
 
-* [Identity Architecture](01-identity-architecture.md)
-* [Identity Governance](02-identity-governance.md)
-* [Authentication and MFA](03-authentication-and-mfa.md)
-* [Conditional Access Design](04-conditional-access-design.md)
-* [Identity Protection and PIM](05-identity-protection-and-pim.md)
-* [Endpoint Management (Intune)](06-endpoint-management-intune.md)
-* [Microsoft Defender Security](07-microsoft-defender-security.md)
-* [Data Protection with Purview](08-data-protection-purview.md)
-* [Rollout and Deployment Plan](09-rollout-and-deployment-plan.md)
-* [Operational Challenges](10-operational-challenges.md)
-* [Lessons Learned](11-lessons-learned.md)
+* [Identity Architecture](01-architecture.md)
+* [Identity Governance](02-identity-governance-design.md)
+* [Authentication and MFA](03-mfa-implementation.md)
+* [Conditional Access Design](04-conditional-access-policies.md)
+* [Rollout Plan](05-rollout-plan.md)
+* [Challenges and Considerations](06-challenges-and-considerations.md)
+* [Lessons Learned](07-lessons-learned.md)
+* [Security Architecture Overview](08-security-architecture-overview.md)
+* [Monitoring and Security Operations](09-monitoring-and-security-operations.md)
 
 ---
 
